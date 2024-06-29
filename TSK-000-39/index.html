@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+    <meta charset="utf-8">
+    <title>Responsive Image Carousel</title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+   <body> 
+      <!--image Slider starts-->
+       <div class ="slider"> 
+          <div class ="slides"> 
+           <!--Radio Button Starts-->
+           <input type="radio" name="radio-btn" id="radio1">
+           <input type="radio" name="radio-btn" id="radio2">
+           <input type="radio" name="radio-btn" id="radio3">
+            <!--Radio Button Ends-->
+            <!--Slide Images starts-->
+            <div class="slide first">
+                <Image src="1.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <Image src="2.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <Image src="3.jpg" alt="">
+            </div>
+            <!--Slide Images Ends-->
+
+            <!--Automatic slide Navigation starts-->
+            <div class="Navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+            <!--Manual Navigation starts-->
+            <div class="Navigation-manual">
+             <label for="radio1" class="manual-btn"></label>
+             <label for="radio2" class="manual-btn"></label>
+             <label for="radio3" class="manual-btn"></label>
+            </div>    
+             <!--Manual Navigation Ends-->
+            </div>
+         
+       </div>
+       <!--image Slider Ends-->
+       <script type="text/javascript">
+        var counter=1;
+        setInterval(function(){
+            document.getElementById('radio'+ counter).checked=true;
+            counter++;
+            if(counter<4);{
+                counter=1;
+            }
+        },5000);
+
+
+       </script>
+ </body>
+</html>
